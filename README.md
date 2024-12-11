@@ -1,60 +1,32 @@
 # Ex1: Number Formatting Converter and Calculator
 
-## Overview
-This project focuses on creating a Java-based program to validate, convert, and perform arithmetic operations on numbers represented as strings in bases ranging from 2 to 16. The project uses functional programming principles, thorough testing, and GitHub for version control. 
+This project is about creating a program in Java to validate, convert, and perform arithmetic operations on numbers written as strings in bases from 2 to 16. It's a mix of string manipulation, arithmetic, and base conversions, all done interactively. 
 
-## Features
-1. **String-Based Number Representation**:
-   - Numbers are represented as strings in the format `<number>b<base>`. 
-     Examples: 
-     - `1001b2` (binary: 9 in decimal)
-     - `135bA` (decimal: 135)
-     - `12b5` (base 5: 7 in decimal)
-   - Supports bases from **2** (binary) to **16** (hexadecimal).
+## What It Does
+1. **Validates Strings**:
+   - Checks if a string is a number in the form `<number>b<base>`. Examples:
+     - `1001b2` is valid (binary, decimal value 9).
+     - `12b5` is valid (base 5, decimal value 7).
+     - `GbG` is invalid.
 
-2. **Validation**:
-   - Determines if a given string is a valid number representation based on the specified format and base.
-   - Examples of valid inputs: `100111b2`, `135bA`.
-   - Examples of invalid inputs: `b2`, `123b`, `0b1`, `-3b5`, `GbG`.
+2. **Performs Arithmetic**:
+   - Adds and multiplies two numbers provided in the valid format.
 
-3. **Arithmetic Operations**:
-   - **Addition**: Calculates the sum of two valid numbers.
-   - **Multiplication**: Calculates the product of two valid numbers.
+3. **Converts Between Bases**:
+   - Results can be shown in any base from 2 (binary) to 16 (hexadecimal).
 
-4. **Base Conversion**:
-   - Converts the result of operations or numbers to a user-specified base (2–16).
+4. **Finds the Maximum**:
+   - Figures out the largest number among inputs and results.
 
-5. **Maximum Finder**:
-   - Determines the maximum value among a set of numbers (including intermediate results).
-
-6. **Interactive Console Application**:
-   - Prompts users to input numbers, perform operations, and output results in a specified base.
-
-7. **JUnit Testing**:
-   - Comprehensive tests to verify correctness of validation, arithmetic, and conversion functions.
+5. **Interactive Console App**:
+   - Asks for inputs step-by-step and gives clear outputs.
 
 ---
 
-## How It Works
+## How to Use It
+Run the program and follow the prompts. Here's an example:
 
-### Input Format
-- The program expects numbers as strings in the format `<number>b<base>`.
-- Bases:
-  - `b2` for binary, `b10` for decimal, `b16` for hexadecimal, etc.
-  - Bases 10-16 are represented using characters `A`, `B`, ..., `G`.
-
-### Example Interaction
-1. User inputs a string number (`num1`).
-2. The program validates if it is properly formatted and converts it to decimal.
-3. User inputs a second number (`num2`), which is similarly validated.
-4. User specifies the desired output base for results.
-5. The program performs:
-   - Addition and multiplication of `num1` and `num2`.
-   - Base conversion for the results.
-   - Finds the maximum value among the numbers and results.
-
-### Example Execution
-
+```plaintext
 Enter a string as number#1 (or "quit" to end the program): 
 1001b2
 num1= 1001b2 is number: true, value: 9
